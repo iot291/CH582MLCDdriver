@@ -20,6 +20,8 @@ int main() {
     // LCD_Init();  // LCD初始化
     // CST816S_Init(); //触摸初始化
 
+    
+    Timer_0_Init(); //定时器中断开启
     lv_init();             // LVGL 初始化
     lv_port_disp_init();   // 注册LVGL的显示任务
     lv_port_indev_init();  // 注册LVGL的触屏检测任务

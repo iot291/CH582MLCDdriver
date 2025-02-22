@@ -156,7 +156,11 @@
 							"${project}/src/LVGL",
 							"${project}/src/LVGL/src",
 							"${project}/src/LVGL/examples",
-							"${project}/src/LVGL/examples/porting"
+							"${project}/src/LVGL/examples/porting",
+							"${project}/StdPeriphDriver",
+							"${project}/Startup",
+							"${project}/Ld",
+							"${project}/src/UI"
 						],
 						"include_system_paths": [],
 						"include_files": []

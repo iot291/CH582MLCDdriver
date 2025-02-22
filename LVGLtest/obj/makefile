@@ -8,6 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/UI/subdir.mk
 -include src/LVGL/src/widgets/subdir.mk
 -include src/LVGL/src/misc/subdir.mk
 -include src/LVGL/src/hal/subdir.mk

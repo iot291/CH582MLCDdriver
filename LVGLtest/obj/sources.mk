@@ -82,3 +82,4 @@ src/LVGL/src/font \
 src/LVGL/src/hal \
 src/LVGL/src/misc \
 src/LVGL/src/widgets \
+src/UI \

@@ -12,6 +12,8 @@
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
 
+#include "ui.h"
+
 #include <stdio.h>
 
 int user();
@@ -21,7 +23,15 @@ int user();
 // void btn_event_cb (lv_obj_t *btn, lv_event_t event);
 void screen_benchmark(void);
 void create_fps_label(void);
-static void touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
+
+void create_fps_ui (void);
+
+
+
+
+void Timer_0_Init (void);
+void TMR0_TimerInit(uint32_t t);
+
 
 void show_biaopan();
 void show_qie();

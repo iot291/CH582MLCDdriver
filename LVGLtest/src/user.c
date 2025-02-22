@@ -5,24 +5,7 @@
 
 u8 imagestatue = 1;
 u8 gesturesta = 0;
-
-static void touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
-{
-    // 在此实现触摸屏读取函数
-    // 假设你的触摸屏驱动返回的坐标为 x, y 和按键状态为 state
-    int x, y;
-    bool touched = CST816S_TouchStatus();  // 替换为你的触摸读取函数
-    u16 *coords = CST816S_GetXY();
-    x = coords[0];
-    y = coords[1];
-    if (touched) {
-        data->point.x = x;
-        data->point.y = y;
-        data->state = LV_INDEV_STATE_PRESSED;
-    } else {
-        data->state = LV_INDEV_STATE_RELEASED;
-    }
-}
+u16 time = 0;
 
 __HIGH_CODE
 int user() {
@@ -45,44 +28,46 @@ int user() {
 
 
     // 初始化显示驱动（根据你的显示屏硬件接口配置）
-    LCD_Init();  // 替换为你的显示驱动初始化代码
+    // LCD_Init();  // 替换为你的显示驱动初始化代码
 
     // 初始化触摸屏驱动
-    CST816S_Init();  // 替换为你的触摸屏初始化代码
+    // CST816S_Init();  // 替换为你的触摸屏初始化代码
 
-    // 初始化触摸屏输入设备驱动
-    lv_indev_drv_t indev_drv;
-    lv_indev_drv_init (&indev_drv);                             // 初始化输入设备驱动
-    indev_drv.type = LV_INDEV_TYPE_POINTER;                     // 触摸屏是一个指针设备
-    indev_drv.read_cb = touchpad_read;                          // 设置触摸读取回调函数
-    lv_indev_t *my_indev = lv_indev_drv_register (&indev_drv);  // 注册输入设备
+    // lv_init();
+    // lv_port_disp_init();
+    // lv_port_indev_init();
 
+    // lv_obj_t *btn = lv_btn_create (lv_scr_act());
+    // lv_obj_set_pos (btn, 200, 100);
+    // lv_obj_set_size (btn, 120, 50);
+    // lv_obj_t *label = lv_label_create (btn);
+    // lv_label_set_text (label, "Button");
+    // lv_obj_center (label);
 
-    // 创建一个简单的按钮
-    lv_obj_t *btn = lv_btn_create (lv_scr_act());
-    lv_obj_align (btn, LV_ALIGN_CENTER, 50, 50);
+    /*Create an Arc*/
+    // lv_obj_t *arc = lv_arc_create (lv_scr_act());
+    // lv_obj_set_size (arc, 150, 150);
+    // lv_arc_set_rotation (arc, 135);
+    // lv_arc_set_bg_angles (arc, 0, 270);
+    // lv_arc_set_value (arc, 40);
+    // lv_obj_center (arc);
+    // int x, y;
 
-    // 创建按钮标签
-    lv_obj_t *label = lv_label_create (btn);
-    lv_label_set_text (label, "Touch Me");
+    // create_fps_ui();
 
-
+    ui_init();
     while (1) {
 
-        // u16 *coords = CST816S_GetXY();
-        // u16 x = coords[0];
-        // u16 y = coords[1];
-        // LCD_ShowIntNum (50, 50, x, 3, RED, WHITE, 16);
-        // LCD_ShowIntNum (80, 50, y, 3, RED, WHITE, 16);
-        // LCD_ShowIntNum (50, 50, CST816S_TouchStatus(), 3, RED, WHITE, 16);
-
-
-        // CST816S_test();
-        // lv_timer_handler();
         lv_task_handler();
-        // screen_benchmark();
-        DelayMs (10);
+        lv_timer_handler();
+        // u16 *coords = CST816S_GetXY();
+        // x = coords[0];
+        // y = coords[1];
+        // LCD_ShowIntNum (50, 50, x, 3, BLACK, WHITE, 16);
+        // LCD_ShowIntNum (100, 50, y, 3, BLACK, WHITE, 16);
+        DelayMs (1);
     }
+
 
     // u8 i, j;
     // float t = 0;
@@ -132,24 +117,92 @@ int user() {
     return 0;
 }
 
+void TMR0_TimerInit (uint32_t t) {
+    R32_TMR0_CNT_END = t;
+    R8_TMR0_CTRL_MOD = RB_TMR_ALL_CLEAR;
+    R8_TMR0_CTRL_MOD = RB_TMR_COUNT_EN;
+}
+
+void Timer_0_Init (void) {
+    TMR0_ITCfg (ENABLE, TMR0_3_IT_CYC_END);  // 开启中断
+    PFIC_EnableIRQ (TMR0_IRQn);
+    TMR0_TimerInit (800);                    // 设置定时时间 1ms 4mhz晶振4000 1ms, 60mhz 600 1ms
+    PFIC->IPRIOR[16] = 0xff;
+}
+
+__INTERRUPT
+
+__HIGH_CODE
+void TMR0_IRQHandler (void)  // TMR0 定时中断
+{
+
+    if (TMR0_GetITFlag (TMR0_3_IT_CYC_END)) {
+        TMR0_ClearITFlag (TMR0_3_IT_CYC_END);  // 清除中断标志
+    }
+    // time++;
+    // if (time >= 10) {
+    lv_tick_inc (1);
+    //  time = 0;
+    // }
+}
+
+// static lv_obj_t *label_fps;  // 用于显示帧率的标签
+// static uint32_t last_time = 0;  // 上次更新时间（单位：毫秒）
+// static uint32_t frame_count = 0;  // 帧数计数器
+// static char fps_str[16];  // 用于显示 FPS 的字符串
+
+// // 更新帧率的函数
+// static void update_fps(void) {
+//     uint32_t current_time = lv_tick_get();  // 获取当前时间（毫秒）
+
+//  frame_count++;
+
+//  // 每秒更新一次帧率
+//  if (current_time - last_time >= 1000) {
+//      uint32_t fps = frame_count;  // 获取当前的帧率（每秒帧数）
+//      snprintf(fps_str, sizeof(fps_str), "FPS: %d", fps);
+//      lv_label_set_text(label_fps, fps_str);  // 更新标签内容
+
+//  frame_count = 0;  // 重置帧数计数器
+//  last_time = current_time;  // 更新最后更新时间
+// }
+// }
+
+// // 定时器回调函数，更新帧率
+// static void fps_task(lv_timer_t * timer) {
+//     update_fps();  // 更新帧率
+// }
+
+// // 创建帧率测试 UI
+// void create_fps_ui(void) {
+//     // 创建一个标签显示帧率
+//     label_fps = lv_label_create(lv_scr_act());
+//     lv_label_set_text(label_fps, "FPS: 0");  // 初始帧率为 0
+//     lv_obj_align(label_fps, LV_ALIGN_CENTER, 0, 0);  // 标签居中显示
+
+//  // 创建定时器任务，每 100 毫秒调用一次
+//  lv_timer_create(fps_task, 100, NULL);  // 不需要传递额外参数
+// }
+
+
 // void lv_example_ui (void) {
 //     /* 创建一个标签 */
-//     lv_obj_t *label = lv_label_create (lv_scr_act(), NULL);
+//     lv_obj_t *label = lv_label_create (lv_scr_act());
 //     lv_label_set_text (label, "Hello, LVGL!");
-//     lv_obj_align (label, NULL, LV_ALIGN_CENTER, 0, 0);
+//     lv_obj_align (label, LV_ALIGN_CENTER, 0, 0);
 
 //  /* 创建一个按钮 */
-//  lv_obj_t *btn = lv_btn_create (lv_scr_act(), NULL);
+//  lv_obj_t *btn = lv_btn_create (lv_scr_act());
 //  lv_obj_align (btn, label, LV_ALIGN_OUT_BOTTOM_MID, 0, 20);
 //  lv_obj_set_event_cb (btn, btn_event_cb);  // 按钮事件回调函数
 
-//  lv_obj_t *btn_label = lv_label_create (btn, NULL);
+//  lv_obj_t *btn_label = lv_label_create (btn);
 //  lv_label_set_text (btn_label, "Click Me");
 // }
 
 // void btn_event_cb (lv_obj_t *btn, lv_event_t event) {
 //     if (event == LV_EVENT_CLICKED) {
-//         lv_label_set_text (lv_obj_get_child (btn, NULL), "Button Clicked!");
+//         lv_label_set_text (lv_obj_get_child (btn), "Button Clicked!");
 //     }
 // }
 
