@@ -95,7 +95,14 @@ src/LVGL/src/core/lv_refr.o: ../src/LVGL/src/core/lv_refr.c \
  ../src/LVGL/src/core/../font/lv_font.h \
  ../src/LVGL/src/core/../extra/others/snapshot/lv_snapshot.h \
  ../src/LVGL/src/core/../extra/others/snapshot/../../../lv_conf_internal.h \
- ../src/LVGL/src/core/../extra/others/snapshot/../../../core/lv_obj.h
+ ../src/LVGL/src/core/../extra/others/snapshot/../../../core/lv_obj.h \
+ ../src/LVGL/src/core/../widgets/lv_label.h \
+ ../src/LVGL/src/core/../widgets/../lv_conf_internal.h \
+ ../src/LVGL/src/core/../widgets/../core/lv_obj.h \
+ ../src/LVGL/src/core/../widgets/../font/lv_font.h \
+ ../src/LVGL/src/core/../widgets/../font/lv_symbol_def.h \
+ ../src/LVGL/src/core/../widgets/../misc/lv_txt.h \
+ ../src/LVGL/src/core/../widgets/../draw/lv_draw.h
 
 ../src/LVGL/src/core/lv_refr.h:
 
@@ -300,3 +307,17 @@ c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/
 ../src/LVGL/src/core/../extra/others/snapshot/../../../lv_conf_internal.h:
 
 ../src/LVGL/src/core/../extra/others/snapshot/../../../core/lv_obj.h:
+
+../src/LVGL/src/core/../widgets/lv_label.h:
+
+../src/LVGL/src/core/../widgets/../lv_conf_internal.h:
+
+../src/LVGL/src/core/../widgets/../core/lv_obj.h:
+
+../src/LVGL/src/core/../widgets/../font/lv_font.h:
+
+../src/LVGL/src/core/../widgets/../font/lv_symbol_def.h:
+
+../src/LVGL/src/core/../widgets/../misc/lv_txt.h:
+
+../src/LVGL/src/core/../widgets/../draw/lv_draw.h:

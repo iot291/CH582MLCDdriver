@@ -224,6 +224,10 @@ src/LVGL/src/font/lv_font_loader.o: ../src/LVGL/src/font/lv_font_loader.c \
  ../src/LVGL/src/font/../../src/extra/widgets/imgbtn/../../../lvgl.h \
  ../src/LVGL/src/font/../../src/extra/widgets/span/lv_span.h \
  ../src/LVGL/src/font/../../src/extra/widgets/span/../../../lvgl.h \
+ ../src/LVGL/src/font/../../src/extra/widgets/analogclock/lv_analogclock.h \
+ ../src/LVGL/src/font/../../src/extra/widgets/analogclock/../../../lvgl.h \
+ ../src/LVGL/src/font/../../src/extra/widgets/dclock/lv_dclock.h \
+ ../src/LVGL/src/font/../../src/extra/widgets/dclock/../../../lv_conf_internal.h \
  ../src/LVGL/src/font/../misc/lv_fs.h \
  ../src/LVGL/src/font/lv_font_loader.h
 
@@ -678,6 +682,14 @@ c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/
 ../src/LVGL/src/font/../../src/extra/widgets/span/lv_span.h:
 
 ../src/LVGL/src/font/../../src/extra/widgets/span/../../../lvgl.h:
+
+../src/LVGL/src/font/../../src/extra/widgets/analogclock/lv_analogclock.h:
+
+../src/LVGL/src/font/../../src/extra/widgets/analogclock/../../../lvgl.h:
+
+../src/LVGL/src/font/../../src/extra/widgets/dclock/lv_dclock.h:
+
+../src/LVGL/src/font/../../src/extra/widgets/dclock/../../../lv_conf_internal.h:
 
 ../src/LVGL/src/font/../misc/lv_fs.h:
 

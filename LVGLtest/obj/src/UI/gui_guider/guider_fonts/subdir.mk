@@ -1,0 +1,32 @@
+################################################################################
+# MRS Version: 2.1.0
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../src/UI/gui_guider/guider_fonts/lv_font_montserratMedium_12.c \
+../src/UI/gui_guider/guider_fonts/lv_font_montserratMedium_16.c \
+../src/UI/gui_guider/guider_fonts/lv_font_simsun_12.c \
+../src/UI/gui_guider/guider_fonts/lv_font_simsun_16.c \
+../src/UI/gui_guider/guider_fonts/lv_font_simsun_30.c 
+
+C_DEPS += \
+./src/UI/gui_guider/guider_fonts/lv_font_montserratMedium_12.d \
+./src/UI/gui_guider/guider_fonts/lv_font_montserratMedium_16.d \
+./src/UI/gui_guider/guider_fonts/lv_font_simsun_12.d \
+./src/UI/gui_guider/guider_fonts/lv_font_simsun_16.d \
+./src/UI/gui_guider/guider_fonts/lv_font_simsun_30.d 
+
+OBJS += \
+./src/UI/gui_guider/guider_fonts/lv_font_montserratMedium_12.o \
+./src/UI/gui_guider/guider_fonts/lv_font_montserratMedium_16.o \
+./src/UI/gui_guider/guider_fonts/lv_font_simsun_12.o \
+./src/UI/gui_guider/guider_fonts/lv_font_simsun_16.o \
+./src/UI/gui_guider/guider_fonts/lv_font_simsun_30.o 
+
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/UI/gui_guider/guider_fonts/%.o: ../src/UI/gui_guider/guider_fonts/%.c
+	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -mcmodel=medany -msmall-data-limit=8 -mno-save-restore -fmax-errors=20 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -g -DDEBUG=1 -I"c:\Users\ql\Desktop\工作\1.28IPS电容触摸技术资料\新建文件夹\g\LVGLtest\StdPeriphDriver\inc" -I"c:\Users\ql\Desktop\工作\1.28IPS电容触摸技术资料\新建文件夹\g\LVGLtest\RVMSIS" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/include" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/src" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/examples" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/examples/porting" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/StdPeriphDriver" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/Startup" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/Ld" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/UI/squareline" -I"c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/UI/squareline/screens" -std=gnu99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"

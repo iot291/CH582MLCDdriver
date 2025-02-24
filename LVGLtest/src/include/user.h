@@ -11,7 +11,8 @@
 #include "lvgl.h"
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
-
+// #include "gui_guider.h"
+// #include "events_init.h"
 #include "ui.h"
 
 #include <stdio.h>

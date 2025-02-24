@@ -8,7 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/UI/subdir.mk
+-include src/UI/squareline/subdir.mk
 -include src/LVGL/src/widgets/subdir.mk
 -include src/LVGL/src/misc/subdir.mk
 -include src/LVGL/src/hal/subdir.mk
@@ -26,10 +26,12 @@ RM := rm -rf
 -include src/LVGL/src/extra/widgets/led/subdir.mk
 -include src/LVGL/src/extra/widgets/keyboard/subdir.mk
 -include src/LVGL/src/extra/widgets/imgbtn/subdir.mk
+-include src/LVGL/src/extra/widgets/dclock/subdir.mk
 -include src/LVGL/src/extra/widgets/colorwheel/subdir.mk
 -include src/LVGL/src/extra/widgets/chart/subdir.mk
 -include src/LVGL/src/extra/widgets/calendar/subdir.mk
 -include src/LVGL/src/extra/widgets/animimg/subdir.mk
+-include src/LVGL/src/extra/widgets/analogclock/subdir.mk
 -include src/LVGL/src/extra/themes/mono/subdir.mk
 -include src/LVGL/src/extra/themes/default/subdir.mk
 -include src/LVGL/src/extra/themes/basic/subdir.mk

@@ -61,10 +61,12 @@ src/LVGL/src/extra/others/snapshot \
 src/LVGL/src/extra/themes/basic \
 src/LVGL/src/extra/themes/default \
 src/LVGL/src/extra/themes/mono \
+src/LVGL/src/extra/widgets/analogclock \
 src/LVGL/src/extra/widgets/animimg \
 src/LVGL/src/extra/widgets/calendar \
 src/LVGL/src/extra/widgets/chart \
 src/LVGL/src/extra/widgets/colorwheel \
+src/LVGL/src/extra/widgets/dclock \
 src/LVGL/src/extra/widgets/imgbtn \
 src/LVGL/src/extra/widgets/keyboard \
 src/LVGL/src/extra/widgets/led \
@@ -82,4 +84,4 @@ src/LVGL/src/font \
 src/LVGL/src/hal \
 src/LVGL/src/misc \
 src/LVGL/src/widgets \
-src/UI \
+src/UI/squareline \

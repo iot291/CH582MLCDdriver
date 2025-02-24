@@ -185,6 +185,7 @@ static void touchpad_init (void) {
 }
 
 /*Will be called by the library to read the touchpad*/
+__HIGH_CODE
 static void touchpad_read (lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
     static lv_coord_t last_x = 0;
     static lv_coord_t last_y = 0;
@@ -203,6 +204,7 @@ static void touchpad_read (lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
 }
 
 /*Return true is the touchpad is pressed*/
+__HIGH_CODE
 static bool touchpad_is_pressed (void) {
     /*Your code comes here*/
     // int x,y;
@@ -215,6 +217,7 @@ static bool touchpad_is_pressed (void) {
 }
 
 /*Get the x and y coordinates if the touchpad is pressed*/
+__HIGH_CODE
 static void touchpad_get_xy (lv_coord_t *x, lv_coord_t *y) {
     /*Your code comes here*/
 

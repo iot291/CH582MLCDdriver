@@ -7,6 +7,7 @@ u8 imagestatue = 1;
 u8 gesturesta = 0;
 u16 time = 0;
 
+// lv_ui guider_ui;
 __HIGH_CODE
 int user() {
 
@@ -56,6 +57,9 @@ int user() {
     // create_fps_ui();
 
     ui_init();
+
+    // setup_ui(&guider_ui);
+    // events_init(&guider_ui);
     while (1) {
 
         lv_task_handler();

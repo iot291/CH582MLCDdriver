@@ -225,7 +225,11 @@ src/LVGL/src/extra/widgets/imgbtn/lv_imgbtn.o: \
  ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/led/../../../lvgl.h \
  ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/imgbtn/lv_imgbtn.h \
  ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/span/lv_span.h \
- ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/span/../../../lvgl.h
+ ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/span/../../../lvgl.h \
+ ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/analogclock/lv_analogclock.h \
+ c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lvgl.h \
+ ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/dclock/lv_dclock.h \
+ ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/dclock/../../../lv_conf_internal.h
 
 ../src/LVGL/src/extra/widgets/imgbtn/lv_imgbtn.h:
 
@@ -678,3 +682,11 @@ c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\
 ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/span/lv_span.h:
 
 ../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/span/../../../lvgl.h:
+
+../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/analogclock/lv_analogclock.h:
+
+c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lvgl.h:
+
+../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/dclock/lv_dclock.h:
+
+../src/LVGL/src/extra/widgets/imgbtn/../../../../src/extra/widgets/dclock/../../../lv_conf_internal.h:

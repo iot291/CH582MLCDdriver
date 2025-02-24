@@ -146,6 +146,7 @@ volatile bool disp_flush_enabled = true;
 
 /* Enable updating the screen (the flushing process) when disp_flush() is called by LVGL
  */
+ __HIGH_CODE
 void disp_enable_update(void)
 {
     disp_flush_enabled = true;
@@ -153,6 +154,7 @@ void disp_enable_update(void)
 
 /* Disable updating the screen (the flushing process) when disp_flush() is called by LVGL
  */
+ __HIGH_CODE
 void disp_disable_update(void)
 {
     disp_flush_enabled = false;
@@ -161,6 +163,7 @@ void disp_disable_update(void)
 /*Flush the content of the internal buffer the specific area on the display
  *You can use DMA or any hardware acceleration to do this operation in the background but
  *'lv_disp_flush_ready()' has to be called when finished.*/
+__HIGH_CODE
 static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p)
 {
     if(disp_flush_enabled) {

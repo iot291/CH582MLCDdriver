@@ -2,7 +2,7 @@
  * GENERATED FILE, DO NOT EDIT IT!
  * @file lv_conf_internal.h
  * Make sure all the defines of lv_conf.h have a default value
-**/
+ **/
 
 #ifndef LV_CONF_INTERNAL_H
 #define LV_CONF_INTERNAL_H
@@ -2531,6 +2531,30 @@ LV_EXPORT_CONST_INT(LV_DPI_DEF);
     #if defined(_MSC_VER) && !defined(_CRT_SECURE_NO_WARNINGS)    /*Disable warnings for Visual Studio*/
         #define _CRT_SECURE_NO_WARNINGS
     #endif
+
 #endif  /*defined(LV_CONF_SKIP)*/
+
+
+#ifndef LV_USE_DCLOCK
+    #ifdef _LV_KCONFIG_PRESENT
+        #ifdef CONFIG_LV_USE_DCLOCK
+            #define LV_USE_DCLOCK CONFIG_LV_USE_DCLOCK
+        #else
+            #define LV_USE_DCLOCK 0
+        #endif
+    #else
+        #define LV_USE_DCLOCK      1
+    #endif
+#endif
+#if LV_USE_DCLOCK
+    #ifndef LV_DCLOCK_TEXT_SELECTION
+        #ifdef CONFIG_LV_DCLOCK_TEXT_SELECTION
+            #define LV_DCLOCK_TEXT_SELECTION CONFIG_LV_DCLOCK_TEXT_SELECTION
+        #else
+            #define LV_DCLOCK_TEXT_SELECTION 1 /*Enable selecting text of the dclock*/
+        #endif
+    #endif
+#endif
+
 
 #endif  /*LV_CONF_INTERNAL_H*/

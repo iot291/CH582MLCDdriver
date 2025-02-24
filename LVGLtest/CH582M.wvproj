@@ -160,7 +160,8 @@
 							"${project}/StdPeriphDriver",
 							"${project}/Startup",
 							"${project}/Ld",
-							"${project}/src/UI"
+							"${project}/src/UI/squareline",
+							"${project}/src/UI/squareline/screens"
 						],
 						"include_system_paths": [],
 						"include_files": []

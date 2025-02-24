@@ -232,7 +232,11 @@ src/LVGL/src/core/lv_obj.o: ../src/LVGL/src/core/lv_obj.c \
  ../src/LVGL/src/core/../extra/widgets/imgbtn/lv_imgbtn.h \
  ../src/LVGL/src/core/../extra/widgets/imgbtn/../../../lvgl.h \
  ../src/LVGL/src/core/../extra/widgets/span/lv_span.h \
- ../src/LVGL/src/core/../extra/widgets/span/../../../lvgl.h
+ ../src/LVGL/src/core/../extra/widgets/span/../../../lvgl.h \
+ ../src/LVGL/src/core/../extra/widgets/analogclock/lv_analogclock.h \
+ ../src/LVGL/src/core/../extra/widgets/analogclock/../../../lvgl.h \
+ ../src/LVGL/src/core/../extra/widgets/dclock/lv_dclock.h \
+ ../src/LVGL/src/core/../extra/widgets/dclock/../../../lv_conf_internal.h
 
 ../src/LVGL/src/core/lv_obj.h:
 
@@ -713,3 +717,11 @@ c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/
 ../src/LVGL/src/core/../extra/widgets/span/lv_span.h:
 
 ../src/LVGL/src/core/../extra/widgets/span/../../../lvgl.h:
+
+../src/LVGL/src/core/../extra/widgets/analogclock/lv_analogclock.h:
+
+../src/LVGL/src/core/../extra/widgets/analogclock/../../../lvgl.h:
+
+../src/LVGL/src/core/../extra/widgets/dclock/lv_dclock.h:
+
+../src/LVGL/src/core/../extra/widgets/dclock/../../../lv_conf_internal.h:

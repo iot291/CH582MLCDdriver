@@ -33,6 +33,9 @@ extern "C" {
 #include "imgbtn/lv_imgbtn.h"
 #include "span/lv_span.h"
 
+#include "analogclock/lv_analogclock.h"
+#include "dclock/lv_dclock.h"
+
 /*********************
  *      DEFINES
  *********************/

@@ -1,5 +1,5 @@
-src/UI/ui_helpers.o: ../src/UI/ui_helpers.c ../src/UI/ui_helpers.h \
- ../src/UI/ui.h \
+src/UI/squareline/ui_helpers.o: ../src/UI/squareline/ui_helpers.c \
+ ../src/UI/squareline/ui_helpers.h ../src/UI/squareline/ui.h \
  c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/lvgl.h \
  c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/src/misc/lv_log.h \
  c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lv_conf_internal.h \
@@ -225,11 +225,15 @@ src/UI/ui_helpers.o: ../src/UI/ui_helpers.c ../src/UI/ui_helpers.h \
  c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lvgl.h \
  c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/src/extra/widgets/span/lv_span.h \
  c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lvgl.h \
- ../src/UI/ui_events.h
+ c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/src/extra/widgets/analogclock/lv_analogclock.h \
+ c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lvgl.h \
+ c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/src/extra/widgets/dclock/lv_dclock.h \
+ c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lv_conf_internal.h \
+ ../src/UI/squareline/ui_events.h
 
-../src/UI/ui_helpers.h:
+../src/UI/squareline/ui_helpers.h:
 
-../src/UI/ui.h:
+../src/UI/squareline/ui.h:
 
 c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/lvgl.h:
 
@@ -681,4 +685,12 @@ c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/
 
 c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lvgl.h:
 
-../src/UI/ui_events.h:
+c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/src/extra/widgets/analogclock/lv_analogclock.h:
+
+c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lvgl.h:
+
+c:/Users/ql/Desktop/工作/1.28IPS电容触摸技术资料/新建文件夹/g/LVGLtest/src/LVGL/src/extra/widgets/dclock/lv_dclock.h:
+
+c:\users\ql\desktop\工作\1.28ips电容触摸技术资料\新建文件夹\g\lvgltest\src\lvgl\src\lv_conf_internal.h:
+
+../src/UI/squareline/ui_events.h:
